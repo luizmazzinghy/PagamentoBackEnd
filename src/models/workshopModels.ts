@@ -2,13 +2,30 @@
 import mongoose from "mongoose";
 
 const workshopSchema = new mongoose.Schema({
-  title: String,
-  desc: String,
-  price: Number,
-  date: Date,
-  category: String,
-  userId: Number,
-  imageUrl: String,
+  title: {
+    type: String,
+    required: true,
+  },
+  desc: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  date: {
+    type: Date,
+    required: true,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
+  imageUrl: {
+    type: String,
+    required: true,
+  },
 });
 
 const Workshop = mongoose.model("Workshop", workshopSchema);
